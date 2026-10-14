@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMELLIA BOUTIQUE</title>
+    <style>
+        body{
+            background-color: beige;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            padding-left: 70px;
+            background-image: url(IMAGES/anhbiatren.jpg);
+            width: 1420px;
+            margin: 10px auto 5px auto;
+            height: 280px;
+            background-size: cover;       
+            background-position: center;  
+            background-repeat: no-repeat;
+            border-radius: 12px;
+        }
+
+        .slogan_chinh {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: crimson;
+            margin: 15px 0;
+        }
+
+        nav {
+            height: 50px;
+            width: 1490px; 
+            margin: 0 auto 20px auto;
+            background-color: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: deeppink;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+        
+        .khung_chua_haikhung {
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start; 
+            gap: 25px;                 
+            width: 1200px;          
+            margin: 0 auto 40px auto;  
+        }
+        
+        main {
+            width: 700px;                                            
+            padding: 25px 30px;                                     
+            background-color: rgb(254, 254, 231);                
+            border-radius: 16px;                                   
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            color: black;
+            font-family: 'Times New Roman', Times, serif; 
+            margin: 0; 
+            box-sizing: border-box;
+        }
+
+        main img {
+            width: 240px;
+            height: 240px;
+            margin-right: 20px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .chu_nghieng {
+            font-style: italic;
+            color: coral;
+            font-size: 32px;
+        }
+        #n1 {
+            color: rgb(48, 143, 56);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 33px;
+            font-weight: bold;
+            margin: 6px 0;
+        }
+        #n2 {
+            color: brown;
+            font-family: fantasy;
+            font-size: 46px;
+            margin: 10px 0;
+        }
+        #n3 {
+            font-size: 21px;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        .chu_dep {
+            font-style: italic;
+            color: mediumvioletred;
+        }
+        #chu_iu{
+            color: rgb(230, 0, 123);
+        }
+        .khung_gioi_thieu {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 30px;
+            width: 1200px;
+            margin: 0 auto 40px auto;
+            box-sizing: border-box;
+        }
+        .chao_mung {
+            width: 620px;
+            margin-left: 25px; 
+        }
+        .chao_mung p{
+            text-align: justify;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .tieu_de_Trang {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: crimson;
+            margin: 25px 0;
+        }
+
+        .anh1{
+            margin: 0;
+            width: 480px;            
+            height: 290px;  
+            object-fit: cover;       
+            border-radius: 12px;     
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+    
+        .khung_net_dut {
+            border: 2px dashed rgb(228, 55, 7); 
+            background-color: white;    
+            padding: 20px;              
+            border-radius: 12px;            
+            width: 470px; 
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .tieu_de_khung {
+            font-weight: bold;
+            color: rgb(228, 55, 7);
+            font-size: 27px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .benphai {
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;              
+            width: 470px;   
+        }        
+        .khung_net_dut ul {
+            margin: 0;
+            padding-left: 30px;
+            list-style-type: circle;
+        }
+
+        .khung_net_dut li {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .text {
+            text-align: center; 
+            padding-top: 20px;
+        }
+        .khung_hotline  {
+            background-color: rgb(255, 169, 231);
+            border: 1px solid palevioletred;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .khung_hotline b {
+            color: red;
+            font-size: 22px;
+        }
+        
+      
+        .btn-mua-link {
+    text-decoration: none; 
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-mua-ngay {
+    background-color: #ff77a9;          
+    color: #ffff00;                     
+    font-weight: bold;                  
+    font-size: 14px;                    
+    padding: 8px 20px;                  
+    border: 1.5px solid #000000;        
+    border-radius: 10px;                
+    cursor: pointer;                    
+    transition: all 0.2s ease;          
+}
+
+
+.btn-mua-ngay:hover {
+    background-color: #ffff00;          
+    color: #ff007f;                     
+    transform: scale(1.05);             
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+}
+        table {
+            margin: 0 auto;
+            border-radius: 5px;
+            width: 100%;
+        }
+        
+     
+        footer {
+            background: linear-gradient(135deg, #2b0018, #6a0036);
+            color: #fff;
+            padding: 40px 20px 20px 20px;
+            margin-top: 60px;
+            border-top: 4px solid #ff4081;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .footer-col h3 {
+            color: #ffeb3b;
+            font-size: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ff4081;
+            border-radius: 2px;
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #fce4ec;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li a {
+            color: #fce4ec;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffeb3b;
+            transform: translateX(6px);
+        }
+
+        .social-links {
+            margin-top: 12px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: #ff4081;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            margin-top: 30px;
+            padding-top: 18px;
+            font-size: 14px;
+            color: #f8bbd0;
+        }
+
+        .footer-bottom strong {
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <h1 class="slogan_chinh"><span class="chu_dep">Nơi lưu giữ những khoảnh khắc ngọt ngào</span></h1>
+
+    <nav>
+        <a href="index.html" target="_blank">Trang chủ</a>
+        <a href="webcon/tranggioithieu.html" target="_blank">Giới Thiệu</a>
+        <a href="webcon/cuahang.html" target="_blank">Cửa hàng</a>
+        <a href="webcon/Chude.html" target="_blank">Chủ đề</a>
+        <a href="webcon/Lienhe.html" target="_blank">Liên hệ</a>
+        <a href="webcon/camket.html" target="_blank">Cam kết</a>
+    </nav>
+
+    <h1 class="tieu_de_Trang">CAMELLIA BOUTIQUE</h1>
+
+    <div class="khung_gioi_thieu">
+        <div class="chao_mung">
+            <p>
+                Chào mừng quý khách đến với <span id="chu_iu">CAMELLIA BOUTIQUE</span>– không gian nghệ thuật hoa tươi đẳng cấp tại Đồng Tháp!<br><br>
+                Nơi lưu giữ những khoảnh khắc ngọt ngào qua từng đóa hoa tươi thắm được kết thủ công tỉ mỉ và sang trọng. Nơi đây, từng cánh hoa mỏng manh khoác lên mình vẻ đẹp kiêu sa và thanh thuần nhất, sẵn sàng cùng bạn đong đầy cảm xúc, thắp sáng mọi không gian và làm rạng rỡ thêm những dịp đặc biệt trong đời. Chúng tôi tự hào mang đến cho bạn những trải nghiệm mua sắm tinh tế nhất tại <span id="chu_iu">CAMELLIA BOUTIQUE</span>, sẵn sàng đồng hành cùng bạn gửi gắm yêu thương, biến mỗi món quà thành một câu chuyện chân thành và vẹn tròn ý nghĩa nhất.
+            </p>
+        </div>
+        <img src="IMAGES/cuahangtruoc.jpg" alt="Cửa hàng" class="anh1">
+    </div>
+    
+    <div class="khung_chua_haikhung">
+        <main class="nen_sang">
+            <table>
+                <tr>
+                    <td>
+                        <img src="IMAGES/anhbia.jpg" alt="Hoa">
+                    </td>
+                    <td>
+                        <div><span class="chu_nghieng"><b>FEATURED PRODUCT</b></span></div>
+                        <div id="n1">White Elegant Bouquet</div>
+                        <div id="n2">900.000VND</div>
+                        <div id="n3">
+                            Một bó hoa tuyệt đẹp với những bông tulip trắng tinh khôi cùng các nhánh hoa phụ điểm xuyến dịu dàng, được bó thủ công tỉ mỉ bằng dải ruy băng sang trọng. Tượng trưng cho tình yêu thuần khiết và sự thanh cao vĩnh cửu, đây là tác phẩm hoàn hảo để làm bừng sáng mọi không gian hoặc làm một món quà vượt thời gian.
+                        </div>    
+                    </td>  
+                </tr>
+                <tr>
+                    <td colspan="2" class="text">
+                        <a href="webcon/Lienhe.html" class="btn-mua-link">
+                            <button class="btn-mua-ngay">Mua ngay</button>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </main>
+   
+        <div class="benphai">
+            <div class="khung_net_dut">
+                <div class="tieu_de_khung">ƯU ĐÃI & CAM KẾT ĐẶC BIỆT</div>
+                <ul>
+                    <li>🚀 Giao hoa hỏa tốc tận nơi trong 2 giờ.</li>
+                    <li>💌 Tặng kèm thiệp chúc mừng thiết kế riêng.</li>
+                    <li>🌸 Cam kết hoa tươi nguyên bông 100% trong ngày.</li>
+                    <li>🏷️ Nhập mã <b>CHI2026</b> giảm ngay 10%.</li>
+                </ul>
+            </div>
+            <div class="khung_hotline">
+                <b>TƯ VẤN ĐẶT HOA MANG ĐẾN:</b><br>
+                <span>📞 0123.456.789</span><br>
+                <small>💬 Phục vụ 24/7 - Zalo/Viber</small>
+            </div>
+        </div>
+    </div>
+
+   
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>CAMELLIA BOUTIQUE 🌸</h3>
+                <p>Chuyên cung cấp hoa tươi thiết kế, hoa cưới, hoa sự kiện và hoa sáp cao cấp. Mỗi sản phẩm là một tác phẩm nghệ thuật đong đầy cảm xúc.</p>
+                <p>⏰ <b>Giờ mở cửa:</b> 07:00 - 21:00 (Cả T7 & CN)</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Danh Mục Web 📜</h3>
+                <ul>
+                    <li><a href="index.html">✦ Trang chủ</a></li>
+                    <li><a href="webcon/tranggioithieu.html">✦ Giới thiệu cửa hàng</a></li>
+                    <li><a href="webcon/cuahang.html">✦ Bộ sưu tập hoa</a></li>
+                    <li><a href="webcon/Chude.html">✦ Chủ đề hoa tươi</a></li>
+                    <li><a href="webcon/Lienhe.html">✦ Tư vấn & Đặt hoa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Dịch Vụ & Cam Kết 🎀</h3>
+                <p>💐 Hoa tươi nhập mới mỗi ngày</p>
+                <p>🚀 Giao hoa hỏa tốc trong 2 giờ</p>
+                <p>📸 Gửi hình xác nhận trước khi giao</p>
+                <p>🎁 Tặng kèm thiệp & banner thiết kế</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Liên Hệ Đặt Hoa 📞</h3>
+                <p>📍 <b>Địa chỉ:</b> Số 123, Đường Hoa Hồng, TP. Cao Lãnh, Đồng Tháp</p>
+                <p>📞 <b>Hotline/Zalo:</b> 0123 456 789</p>
+                <p>✉️ <b>Email:</b> Chi@hoatuoi.com</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Facebook</a>
+                    <a href="#" class="social-btn">Zalo</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Cửa hàng Hoa tươi CAMELLIA BOUTIQUE. Bản quyền thuộc về <strong>CHI</strong> 🌸</p>
+        </div>
+    </footer>
+</body>
+</html>

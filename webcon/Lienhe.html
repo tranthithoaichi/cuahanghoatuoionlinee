@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - CAMELLIA BOUTIQUE</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            padding-left: 70px;
+            background-image: url(../IMAGES/anhbiatren.jpg);
+            width: 1420px;
+            margin: 10px auto 5px auto;
+            height: 280px;
+            background-size: cover;       
+            background-position: center;  
+            background-repeat: no-repeat;
+            border-radius: 12px;
+        }
+
+        nav {
+            height: 50px;
+            width: 1490px; 
+            margin: 0 auto 20px auto;
+            background-color: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: deeppink;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+
+        p {
+            color: darkred;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .haikhung {
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start; 
+            gap: 30px;                             
+            width: 1000px;           
+            margin: 0 auto 40px auto;  
+            clear: both;   
+        }
+
+        main {
+            width: 600px;                                               
+            padding: 25px;                               
+            background-color: pink;               
+            border-radius: 16px;                                    
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            color: black;
+            font-family: 'Times New Roman', Times, serif; 
+            margin: 0; 
+            font-size: 22px;
+        }
+
+        table tr td {
+            font-size: 20px; 
+            padding: 8px 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            font-size: 18px;
+            padding: 8px; 
+            width: 250px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            font-size: 18px;
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid #d9534f;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        select option {
+            font-size: 16px;
+            padding: 10px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        textarea {
+            font-size: 18px; 
+            font-family: Arial, sans-serif;
+            width: 280px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .khung1 {
+            border: 2px dashed rgb(228, 55, 7); 
+            background-color: white;    
+            padding: 15px 20px;             
+            border-radius: 8px;             
+            width: 320px; 
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .tieude {
+            font-weight: bold;
+            color: rgb(228, 55, 7);
+            font-size: 25px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .khung1 ul {
+            margin: 0;
+            padding-left: 30px;
+        }
+
+        .khung1 li {
+            margin-bottom: 9px;
+            font-size: 22px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .tien {
+            display: flex;
+            width: auto;
+            justify-content: center;
+            padding-top: 15px;
+        }
+
+        .mua {
+            font-size: 20px;     
+            font-weight: bold;   
+            padding: 12px 30px;  
+            cursor: pointer;     
+            background-color: white;
+            border: 2px solid darkred;
+            color: darkred;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .mua:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+    
+        footer {
+            background: linear-gradient(135deg, #2b0018, #6a0036);
+            color: #fff;
+            padding: 40px 20px 20px 20px;
+            margin-top: 60px;
+            border-top: 4px solid #ff4081;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .footer-col h3 {
+            color: #ffeb3b;
+            font-size: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ff4081;
+            border-radius: 2px;
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #ffffff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffeb3b;
+            transform: translateX(6px);
+        }
+
+        .social-links {
+            margin-top: 12px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: #ff4081;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 30px;
+            padding-top: 18px;
+        }
+
+        .footer-bottom p {
+            font-size: 16px;
+            color: #ffffff !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0;
+        }
+
+        .footer-bottom strong {
+            color: #ffeb3b !important;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a href="../webcon/tranggioithieu.html" target="_blank">Giới Thiệu</a>
+        <a href="cuahang.html" target="_blank">Cửa hàng</a>
+        <a href="../webcon/Chude.html" target="_blank">Chủ đề</a>
+        <a href="../webcon/Lienhe.html" target="_blank">Liên hệ</a>
+        <a href="../webcon/camket.html" target="_blank">Cam kết</a>
+    </nav>
+    <p>Đăng ký tư vấn & Đặt mua hoa</p>
+    <div class="haikhung">
+        <main>
+            <table>
+                <tr>
+                    <td><label for="HvT"><b>Họ và tên:</b></label></td>
+                    <td><input type="text" id="HvT" name="HovaTen" placeholder="Nhập họ tên..."></td>
+                </tr>
+                <tr>
+                    <td><label for="DC"><b>Email:</b></label></td>
+                    <td><input type="email" id="DC" name="diachi" placeholder="Nhập Email..."></td>
+                </tr>
+                <tr>
+                    <td><b>Giới tính:</b></td>
+                    <td>
+                        <label for="nam">Nam</label> <input type="radio" id="nam" name="gioitinh" value="Nam">
+                        <label for="nu">Nữ</label> <input type="radio" id="nu" name="gioitinh" value="Nữ">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="soluong"><b>Số lượng bó hoa:</b></label></td>
+                    <td><input type="number" id="soluong" name="soluonghoa" placeholder="Số lượng..."></td>
+                </tr>
+                <tr>
+                    <td><b>Loại hoa yêu thích:</b></td>
+                    <td>
+                        <select name="loaihoa">
+                            <option>Hoa cẩm tú cầu</option>
+                            <option>Hoa hồng phấn</option>
+                            <option>Hoa baby</option>
+                            <option>Hoa tulip trắng</option>
+                            <option>Hoa cúc tana</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="hoa"><b>Dịch vụ kèm theo:</b></label></td>
+                    <td>
+                        <input type="checkbox" name="goiqua"> Gói quà cao cấp <br>
+                        <input type="checkbox" name="thiep"> Tặng kèm thiệp chúc mừng <br>
+                        <input type="checkbox" name="giaohangnhanh"> Giao hàng hỏa tốc <br>
+                        <input type="checkbox" name="giuchatluong"> Bảo quản hoa tươi 3 ngày <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Yêu cầu khác:</b></td>
+                    <td><textarea name="yeucau" rows="4" placeholder="Nhập yêu cầu chi tiết..."></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="tien">
+                            <input type="button" class="mua" value="Đăng ký mua" onclick="alert('Bạn đã đăng ký đặt hoa thành công!')">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </main>
+
+        <div class="khung1">
+            <div class="tieude">ƯU ĐÃI & CAM KẾT ĐẶC BIỆT</div>
+            <ul>
+                <li>📍 Địa chỉ: Số 123, Đường Hoa Hồng, TP. Cao Lãnh, Đồng Tháp.</li>
+                <li>☎️ Hotline/Zalo: 0123 456 789 (Hỗ trợ 24/7).</li>  
+                <li>📩 Email: Chi@tiemhoatuoi.com.</li>
+                <li>⏰ Giờ mở cửa: 7:30 sáng - 21:00 tối (Tất cả các ngày trong tuần).</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>CAMELLIA BOUTIQUE 🌸</h3>
+                <p>Chuyên cung cấp hoa tươi thiết kế, hoa cưới, hoa sự kiện và hoa sáp cao cấp. Mỗi sản phẩm là một tác phẩm nghệ thuật đong đầy cảm xúc.</p>
+                <p>⏰ <b>Giờ mở cửa:</b> 07:00 - 21:00 (Cả T7 & CN)</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Danh Mục Web 📜</h3>
+                <ul>
+                    <li><a href="../index.html">✦ Trang chủ</a></li>
+                    <li><a href="tranggioithieu.html">✦ Giới thiệu cửa hàng</a></li>
+                    <li><a href="cuahang.html">✦ Bộ sưu tập hoa</a></li>
+                    <li><a href="Chude.html">✦ Chủ đề hoa tươi</a></li>
+                    <li><a href="Lienhe.html">✦ Tư vấn & Đặt hoa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Dịch Vụ & Cam Kết 🎀</h3>
+                <p>💐 Hoa tươi nhập mới mỗi ngày</p>
+                <p>🚀 Giao hoa hỏa tốc trong 2 giờ</p>
+                <p>📸 Gửi hình xác nhận trước khi giao</p>
+                <p>🎁 Tặng kèm thiệp & banner thiết kế</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Liên Hệ Đặt Hoa 📞</h3>
+                <p>📍 <b>Địa chỉ:</b> Số 123, Đường Hoa Hồng, TP. Cao Lãnh, Đồng Tháp</p>
+                <p>📞 <b>Hotline/Zalo:</b> 0123 456 789</p>
+                <p>✉️ <b>Email:</b> Chi@tiemhoatuoi.com</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Facebook</a>
+                    <a href="#" class="social-btn">Zalo</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Cửa hàng Hoa tươi CAMELLIA BOUTIQUE. Bản quyền thuộc về <strong>CHI</strong> 🌸</p>
+        </div>
+    </footer>
+</body>
+</html>

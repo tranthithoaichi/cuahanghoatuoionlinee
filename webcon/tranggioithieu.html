@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 245, 191);
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:white;
+        display: flex;
+        align-items:center;
+        padding-left: 60px;
+        background-image: url(../IMAGES/anhbiatren.jpg);
+        width: 100%;
+        max-width: 2000px;
+        height: 250px;
+        background-size: cover;       
+        background-position: center;  
+        background-repeat: no-repeat;
+    }
+    nav {
+            height: 50px;
+            width: 100%; 
+            margin: 0 auto 20px auto;
+            background-color: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: deeppink;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+    .gt {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        width: 1000px;
+        margin: 40px auto;
+        flex-direction: row-reverse;
+    }
+
+    .gt p {
+        text-align: justify;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .trong1{
+        margin: 10px;
+        width: 450px;            
+        height: auto;            
+        border-radius: 8px;      
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #chu_dam{
+        color: red;
+        font-weight: bold;
+    }
+
+
+    .video-va-anh {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px; 
+        margin: 40px auto;
+        flex-wrap: wrap; 
+    }
+
+    .video-section {
+        width: 450px;
+        text-align: center;
+    }
+
+    .video-section b {
+        font-size: 25px;
+        color: firebrick;
+    }
+
+    .video-thumbnail-box {
+        position: relative;
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 3px solid lightpink;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .video-thumbnail-box img {
+        width: 100%;
+        display: block;
+    }
+
+    .anh-ben-canh {
+        width: 450px; 
+    }
+
+    .anh-ben-canh img {
+        width: 100%;
+        border-radius: 8px;
+        border: 3px solid lightpink;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: block;
+    }
+
+  
+    footer {
+        background: linear-gradient(135deg, #2b0018, #6a0036);
+        color: #fff;
+        padding: 40px 20px 20px 20px;
+        margin-top: 60px;
+        border-top: 4px solid #ff4081;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.2);
+        font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .footer-col {
+        flex: 1;
+        min-width: 260px;
+    }
+
+    .footer-col h3 {
+        color: #ffeb3b;
+        font-size: 20px;
+        margin-bottom: 15px;
+        position: relative;
+        padding-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+
+    .footer-col h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background-color: #ff4081;
+        border-radius: 2px;
+    }
+
+    .footer-col p, .footer-col li {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #fce4ec;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-col ul li a {
+        color: #fce4ec;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .footer-col ul li a:hover {
+        color: #ffeb3b;
+        transform: translateX(6px);
+    }
+
+    .social-links {
+        margin-top: 12px;
+        display: flex;
+        gap: 12px;
+    }
+
+    .social-btn {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+        background-color: #ff4081;
+        color: #fff;
+        transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        margin-top: 30px;
+        padding-top: 18px;
+        font-size: 14px;
+        color: #f8bbd0;
+    }
+
+    .footer-bottom strong {
+        color: #ffeb3b;
+    }
+</style>
+<body>
+   <header></header>
+   <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a href="../webcon/tranggioithieu.html" target="_blank">Giới Thiệu</a>
+        <a href="cuahang.html" target="_blank">Cửa hàng</a>
+        <a href="../webcon/Chude.html" target="_blank">Chủ đề</a>
+        <a href="../webcon/Lienhe.html" target="_blank">Liên hệ</a>
+        <a href="../webcon/camket.html" target="_blank">Cam kết</a>
+    </nav>
+
+    <div class="gt">
+        <img src="../IMAGES/cuahangtrpng.jpg" alt="Bên trong 1" class="trong1">
+        <div class="gioithieu">
+            <p>
+             Chào mừng quý khách bước chân vào <span id="chu_dam">CAMELLIA BOUTIQUE</span> – thiên đường nghệ thuật hoa tươi mang phong cách độc bản giữa lòng thành phố Cao Lãnh!<br><br>
+             Giữa nhịp sống hối hả, cửa hàng của chúng tôi chính là góc nhỏ bình yên lưu giữ những khoảnh khắc ngọt ngào và chân thành nhất. Mỗi tác phẩm hoa tươi tại đây đều là một kiệt tác thủ công được trau chuốt tỉ mỉ từ những đôi bàn tay tài hoa, kết hợp giữa sự tinh tế hiện đại và nét đẹp sang trọng, đẳng cấp.<br><br>
+             Chúng tôi tâm niệm rằng mỗi đóa hoa trao đi không chỉ đơn thuần là một món quà, mà còn là thông điệp yêu thương sâu sắc, là nhịp cầu gắn kết cảm xúc trong mọi dịp kỷ niệm, sinh nhật hay sự kiện đặc biệt của bạn. Hãy để <span id="chu_dam">CAMELLIA BOUTIQUE</span> đồng hành cùng bạn viết nên những kỷ niệm khó quên và thăng hoa cùng những giá trị thẩm mỹ tuyệt mỹ nhất!
+            </p>
+        </div>
+    </div>
+
+    <div class="video-va-anh">
+        <div class="video-section">
+            <a href="#" style="text-decoration: none;"><b>Một ngày làm hoa</b></a><br>
+            <hr style="border: 1px solid lightpink;">
+            <a href="https://youtu.be/BrTXuVlaq4Y?si=qaW9Xrcqb1iWQRDW" target="_blank" class="video-thumbnail-box">
+                <img src="../IMAGES/motngayhoa.jpg" alt="Video giới thiệu Camellia Boutique">
+            </a>
+        </div>
+
+        <div class="anh-ben-canh">
+            <img src="../IMAGES/cuahangtrong2.jpg" alt="Ảnh cửa hàng bên trong">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>CAMELLIA BOUTIQUE 🌸</h3>
+                <p>Chuyên cung cấp hoa tươi thiết kế, hoa cưới, hoa sự kiện và hoa sáp cao cấp. Mỗi sản phẩm là một tác phẩm nghệ thuật đong đầy cảm xúc.</p>
+                <p>⏰ <b>Giờ mở cửa:</b> 07:00 - 21:00 (Cả T7 & CN)</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Danh Mục Web 📜</h3>
+                <ul>
+                    <li><a href="../index.html">✦ Trang chủ</a></li>
+                    <li><a href="tranggioithieu.html">✦ Giới thiệu cửa hàng</a></li>
+                    <li><a href="cuahang.html">✦ Bộ sưu tập hoa</a></li>
+                    <li><a href="Chude.html">✦ Chủ đề hoa tươi</a></li>
+                    <li><a href="Lienhe.html">✦ Tư vấn & Đặt hoa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Dịch Vụ & Cam Kết 🎀</h3>
+                <p>💐 Hoa tươi nhập mới mỗi ngày</p>
+                <p>🚀 Giao hoa hỏa tốc trong 2 giờ</p>
+                <p>📸 Gửi hình xác nhận trước khi giao</p>
+                <p>🎁 Tặng kèm thiệp & banner thiết kế</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Liên Hệ Đặt Hoa 📞</h3>
+                <p>📍 <b>Địa chỉ:</b> Số 123, Đường Hoa Hồng, TP. Cao Lãnh, Đồng Tháp</p>
+                <p>📞 <b>Hotline/Zalo:</b> 0123 456 789</p>
+                <p>✉️ <b>Email:</b> Chi@hoatuoi.com</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Facebook</a>
+                    <a href="#" class="social-btn">Zalo</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Cửa hàng Hoa tươi CAMELLIA BOUTIQUE. Bản quyền thuộc về <strong>CHI</strong> 🌸</p>
+        </div>
+    </footer>
+</body>
+</html>
